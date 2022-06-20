@@ -108,48 +108,48 @@ Future<bool> exitDialog({required context, required contentKey}) async {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  const SizedBox(
-                    height: 18,
-                    child: Divider(
-                      color: Colors.white10,
-                    ),
-                  ),
-
-                  /// save and exit
-                  AnimatedOnTapButton(
-                    onTap: () async {
-                      final _paintingProvider =
-                          Provider.of<PaintingNotifier>(context, listen: false);
-                      final _widgetProvider =
-                          Provider.of<DraggableWidgetNotifier>(context,
-                              listen: false);
-                      if (_paintingProvider.lines.isNotEmpty ||
-                          _widgetProvider.draggableWidget.isNotEmpty) {
-                        /// save image
-                        var response = await takePicture(
-                            contentKey: contentKey,
-                            context: context,
-                            saveToGallery: true);
-                        if (response) {
-                          _dispose(
-                              context: context, message: 'Successfully saved');
-                        } else {
-                          _dispose(context: context, message: 'Error');
-                        }
-                      } else {
-                        _dispose(context: context, message: 'Draft Empty');
-                      }
-                    },
-                    child: const Text(
-                      'Save Draft',
-                      style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 0.5),
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
+                  // const SizedBox(
+                  //   height: 18,
+                  //   child: Divider(
+                  //     color: Colors.white10,
+                  //   ),
+                  // ),
+                  //
+                  // /// save and exit
+                  // AnimatedOnTapButton(
+                  //   onTap: () async {
+                  //     final _paintingProvider =
+                  //         Provider.of<PaintingNotifier>(context, listen: false);
+                  //     final _widgetProvider =
+                  //         Provider.of<DraggableWidgetNotifier>(context,
+                  //             listen: false);
+                  //     if (_paintingProvider.lines.isNotEmpty ||
+                  //         _widgetProvider.draggableWidget.isNotEmpty) {
+                  //       /// save image
+                  //       var response = await takePicture(
+                  //           contentKey: contentKey,
+                  //           context: context,
+                  //           saveToGallery: true);
+                  //       if (response) {
+                  //         _dispose(
+                  //             context: context, message: 'Successfully saved');
+                  //       } else {
+                  //         _dispose(context: context, message: 'Error');
+                  //       }
+                  //     } else {
+                  //       _dispose(context: context, message: 'Draft Empty');
+                  //     }
+                  //   },
+                  //   child: const Text(
+                  //     'Save Draft',
+                  //     style: TextStyle(
+                  //         fontSize: 16,
+                  //         color: Colors.white,
+                  //         fontWeight: FontWeight.bold,
+                  //         letterSpacing: 0.5),
+                  //     textAlign: TextAlign.center,
+                  //   ),
+                  // ),
                   const SizedBox(
                     height: 18,
                     child: Divider(
