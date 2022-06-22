@@ -33,7 +33,7 @@ dependencies:
   # animations
   animated_text_kit: ^4.2.1
   # rendering
-  ffmpeg_kit_flutter_min_gpl: ^4.5.1-LTS
+  ffmpeg_kit_flutter: ^4.5.1-LTS
   # permission
   permission_handler: ^8.1.6
   # toast
